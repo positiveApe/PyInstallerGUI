@@ -13,12 +13,6 @@ class PyInstallerGUI(tk.Tk):
 
         self.file_path = ""
         self.output_path = ""
-        # self.copy_files = ["C:\\Users\\NicCornejo\\Documents\\create-executables\\config.json",
-        #                    "C:\\Users\\NicCornejo\\Documents\\create-executables\\IDAutomationHC39M Free Version.otf",
-        #                    "C:\\Users\\NicCornejo\\Documents\\create-executables\\pdfium.dll",
-        #                    "C:\\Users\\NicCornejo\\Documents\\create-executables\\Technical-Response-Logo.ico"
-        #                    ]
-
         self.create_widgets()
 
     def create_widgets(self):
@@ -66,10 +60,6 @@ class PyInstallerGUI(tk.Tk):
 
         try:
             subprocess.run(command, check=True)
-            # for file_path in self.copy_files:
-            #     file_name = os.path.basename(file_path)
-            #     shutil.copy(file_path, os.path.join(os.path.dirname(self.output_path), file_name))
-
             # Copy the build folder
             # Move the build folder and spec file to the same location
             build_path = os.path.join(os.path.dirname(self.output_path), 'build')
